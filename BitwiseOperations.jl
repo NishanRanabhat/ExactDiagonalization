@@ -91,9 +91,9 @@ function XX(conf::Int64,i::Int64,j::Int64,N::Int64,typeof::String)
     """
     
     if typeof == "Pauli"
-        return 1.0, X(X(conf,i,N)[2],j,N)[2]
+        return 1.0, X(X(conf,i,N,typeof)[2],j,N,typeof)[2]
     else
-        return 1.0/4.0, X(X(conf,i,N)[2],j,N)[2]
+        return 1.0/4.0, X(X(conf,i,N,typeof)[2],j,N,typeof)[2]
     end
 end
 
@@ -121,9 +121,9 @@ function YY(conf::Int64,i::Int64,j::Int64,N::Int64,typeof::String)
     sj = (2.0*readsite(conf,j,N)-1.0)*im
     
     if typeof == "Pauli"
-        return si*sj, Y(Y(conf,i,N)[2],j,N)[2]
+        return si*sj, Y(Y(conf,i,N,typeof)[2],j,N,typeof)[2]
     else
-        return si*sj/4.0, Y(Y(conf,i,N)[2],j,N)[2]
+        return si*sj/4.0, Y(Y(conf,i,N,typeof)[2],j,N,typeof)[2]
     end
 end
 
