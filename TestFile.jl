@@ -1,12 +1,11 @@
 using LinearAlgebra
 using Arpack
-
 """
 Note: to use this module you need to download all the files in one folder in your local device
 """
 
 #include the path to the module
-include("/path/to/module/folder/ExactDiag.jl")
+include("/home/nishan/CodeDev/ExactDiagonalization/ExactDiag.jl")
 
 #call module
 using .ExactDiag
@@ -18,8 +17,8 @@ Below is a specific example.
 
 #Define Parameters
 
-N = 8 #system size
-Nup = 4 #number of up spins,
+N = 5 #system size
+Nup = 3 #number of up spins,
 
 #Define the hilbert space based on choosen parameters
 Basis = ExactDiag.hilbert_space(N=N,Nup=Nup);

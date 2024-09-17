@@ -4,11 +4,11 @@ module ExactDiag
 This module collects all important functions
 """
 
-include("Bitwise_operations.jl")
-include("Helper_functions.jl")
+include("BitwiseOperations.jl")
+include("HelperFunctions.jl")
 include("Basis.jl")
-include("Operator.jl")
+include("Operators.jl")
 
 
 
-end #module
+end
